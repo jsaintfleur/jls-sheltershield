@@ -7,7 +7,7 @@ describe('ShelterShield overview page', () => {
   it('renders the executive overview and license flags', () => {
     render(<OverviewPage />);
 
-    expect(screen.getByText(/See displacement before it happens/i)).toBeInTheDocument();
+    expect(screen.getByText(/See displacement before capital arrives too late/i)).toBeInTheDocument();
     expect(screen.getByText(/Eviction Lab data is non-commercial/i)).toBeInTheDocument();
   });
 });

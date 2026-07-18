@@ -28,10 +28,19 @@
     "Market Heat",
     "Stock Vulnerability"
   ],
+  "computed_analytics": [
+    "Monte-Carlo weight sensitivity",
+    "Eviction-pressure back-test"
+  ],
   "proposed_future_domains": [
-    "ACS affordability (rent burden, income)",
+    "ACS affordability (rent burden, income; requires CENSUS_API_KEY)",
     "HPD housing distress",
     "Eviction Lab (national)",
     "HUD LIHTC affordable-stock presence"
+  ],
+  "caveats": [
+    "Executed evictions undercount displacement because many households leave before marshal execution.",
+    "Assessed value is a directional market-pressure proxy, not a direct market-price estimate.",
+    "Back-test uses current PLUTO stock and assessed-value data with periodized eviction outcomes; it is directional, not causal."
   ]
 }

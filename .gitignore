@@ -17,7 +17,9 @@ public/data/**
 !data/processed/.gitkeep
 !data/processed/summary.json
 !data/processed/tracts.geojson
+!data/processed/ranked-tracts.csv
 !public/data/.gitkeep
 !public/data/sources.json
 !public/data/summary.json
 !public/data/tracts.geojson
+!public/data/ranked-tracts.csv

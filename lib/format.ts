@@ -36,8 +36,8 @@ export function riskColor(score: number): string {
 }
 
 export const ARCHETYPE_META: Record<string, { color: string; blurb: string }> = {
-  Preserve: { color: "#0d9488", blurb: "High risk + substantial residential stock — protect existing affordability." },
-  Protect: { color: "#b45309", blurb: "High risk + thinner stock — tenant protection & anti-displacement funding." },
-  Produce: { color: "#2563eb", blurb: "Lower risk + capacity — target for new affordable production." },
-  Monitor: { color: "#64748b", blurb: "Lower risk today — watch for emerging pressure." },
+  Preserve: { color: "#0b7a3b", blurb: "High risk + substantial residential stock — preserve existing affordability." },
+  Protect: { color: "#92400e", blurb: "High risk + thinner stock — tenant protection and anti-displacement funding." },
+  Produce: { color: "#2563eb", blurb: "Lower risk + stock capacity — evaluate new affordable production." },
+  Monitor: { color: "#64748b", blurb: "Lower risk today — monitor for emerging pressure." },
 };

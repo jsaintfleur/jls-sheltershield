@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
-import { ThemeToggle } from '@/lib/design/primitives';
+import { SiteHeader } from '@/components/SiteHeader';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,10 +28,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" data-app-accent="shelter">
       <body className={`${inter.variable} ${jetBrainsMono.variable} font-sans antialiased`}>
-        <div className="fixed right-4 top-4 z-50 rounded-[var(--radius-lg)] border border-[var(--chrome-border)] bg-[var(--chrome-bg)] px-3 py-2 shadow-[var(--shadow-1)]">
-          <ThemeToggle />
-        </div>
-        {children}
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-[var(--accent-600)] focus:px-4 focus:py-2 focus:text-white"
+        >
+          Skip to content
+        </a>
+        <SiteHeader />
+        <main id="main">{children}</main>
       </body>
     </html>
   );
