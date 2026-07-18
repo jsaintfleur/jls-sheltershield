@@ -28,7 +28,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" data-app-accent="shelter">
       <body className={`${inter.variable} ${jetBrainsMono.variable} font-sans antialiased`}>
-        <div className="fixed right-4 top-4 z-50 rounded-[var(--radius-lg)] border border-[var(--border-default)] bg-[var(--bg-panel)] px-3 py-2 shadow-[var(--shadow-1)]">
+        <div className="fixed right-4 top-4 z-50 rounded-[var(--radius-lg)] border border-[var(--chrome-border)] bg-[var(--chrome-bg)] px-3 py-2 shadow-[var(--shadow-1)]">
           <ThemeToggle />
         </div>
         {children}
