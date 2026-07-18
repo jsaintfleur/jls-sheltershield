@@ -30,7 +30,6 @@ export function RiskMap() {
           container: containerRef.current,
           style: {
             version: 8,
-            glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
             sources: {},
             layers: [{ id: "bg", type: "background", paint: { "background-color": "#eef2f4" } }],
           },
