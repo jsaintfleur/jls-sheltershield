@@ -1,5 +1,6 @@
 node_modules
 .next
+.venv
 out
 coverage
 playwright-report
@@ -14,4 +15,9 @@ data/processed/**
 public/data/**
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+!data/processed/summary.json
+!data/processed/tracts.geojson
 !public/data/.gitkeep
+!public/data/sources.json
+!public/data/summary.json
+!public/data/tracts.geojson

@@ -1,35 +1,55 @@
-import { Slot } from '@radix-ui/react-slot';
-import { cva, type VariantProps } from 'class-variance-authority';
-import * as React from 'react';
-import { cn } from '@/lib/utils';
+"use client";
+
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import type { ComponentPropsWithoutRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  'inline-flex min-h-10 items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50',
+  "inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: 'bg-accent-600 text-white hover:bg-accent-700',
-        secondary: 'border border-border-default bg-surface text-text-primary hover:bg-inset'
-      }
+        default: "bg-teal-700 text-white hover:bg-teal-800",
+        secondary: "bg-stone-100 text-stone-950 hover:bg-stone-200",
+        outline:
+          "border border-stone-300 bg-white text-stone-950 hover:bg-stone-50",
+        ghost: "text-stone-950 hover:bg-stone-100",
+        link: "text-teal-700 underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
     },
     defaultVariants: {
-      variant: 'default'
-    }
-  }
+      variant: "default",
+      size: "default",
+    },
+  },
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends ComponentPropsWithoutRef<"button">,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : 'button';
-    return <Comp className={cn(buttonVariants({ variant, className }))} ref={ref} {...props} />;
-  }
-);
-Button.displayName = 'Button';
+export function Button({
+  className,
+  variant,
+  size,
+  asChild = false,
+  ...props
+}: ButtonProps) {
+  const Comp = asChild ? Slot : "button";
 
-export { Button, buttonVariants };
+  return (
+    <Comp className={cn(buttonVariants({ variant, size, className }))} {...props} />
+  );
+}
+
+export { buttonVariants };

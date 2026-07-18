@@ -11,7 +11,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        brand: {
+          50: '#f0fdfa',
+          100: '#ccfbf1',
+          500: '#14b8a6',
+          600: '#0d9488',
+          700: '#0f766e',
+          800: '#115e59',
+          900: '#134e4a'
+        },
+        ink: {
+          DEFAULT: '#0f172a',
+          soft: '#334155',
+          muted: '#64748b',
+          faint: '#94a3b8'
+        },
         canvas: 'var(--bg-canvas)',
+        panel: '#ffffff',
         surface: 'var(--bg-surface)',
         inset: 'var(--bg-inset)',
         border: {
@@ -42,7 +58,8 @@ const config: Config = {
         xs: 'var(--shadow-xs)',
         sm: 'var(--shadow-sm)',
         md: 'var(--shadow-md)',
-        lg: 'var(--shadow-lg)'
+        lg: 'var(--shadow-lg)',
+        card: '0 1px 2px rgba(15,23,42,0.04), 0 4px 16px rgba(15,23,42,0.06)'
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'Inter', 'ui-sans-serif', 'system-ui'],

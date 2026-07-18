@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "name": "NYC Evictions",
+      "id": "6z8x-wfk4",
+      "license": "NYC Open Data (public domain)",
+      "url": "https://data.cityofnewyork.us/City-Government/Evictions/6z8x-wfk4",
+      "role": "Displacement pressure (executed residential evictions)"
+    },
+    {
+      "name": "NYC PLUTO",
+      "id": "64uk-42ks",
+      "license": "NYC Open Data (public domain)",
+      "url": "https://data.cityofnewyork.us/City-Government/Primary-Land-Use-Tax-Lot-Output-PLUTO-/64uk-42ks",
+      "role": "Residential units, assessed value, year built"
+    },
+    {
+      "name": "NYC 2020 Census Tracts",
+      "id": "63ge-mke6",
+      "license": "NYC Open Data (public domain)",
+      "url": "https://data.cityofnewyork.us/City-Government/2020-Census-Tracts/63ge-mke6",
+      "role": "Tract geometry + GEOID join spine"
+    }
+  ],
+  "join_note": "Evictions census_tract mapped to CT2020 (~91.5% coverage); unmatched tracts excluded and reported.",
+  "computed_domains": [
+    "Displacement Pressure",
+    "Market Heat",
+    "Stock Vulnerability"
+  ],
+  "proposed_future_domains": [
+    "ACS affordability (rent burden, income)",
+    "HPD housing distress",
+    "Eviction Lab (national)",
+    "HUD LIHTC affordable-stock presence"
+  ]
+}

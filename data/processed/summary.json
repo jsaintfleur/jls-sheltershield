@@ -1,0 +1,162 @@
+{
+  "generated_utc": "2026-07-18T00:38:01Z",
+  "geography": "New York City census tracts (2020)",
+  "tracts_scored": 2224,
+  "total_residential_units": 3709601,
+  "total_executed_evictions": 98307,
+  "archetype_counts": {
+    "Preserve": 593,
+    "Monitor": 590,
+    "Protect": 521,
+    "Produce": 520
+  },
+  "borough_avg_risk": {
+    "Bronx": 37.8,
+    "Brooklyn": 59.0,
+    "Manhattan": 59.9,
+    "Queens": 47.2,
+    "Staten Island": 17.9
+  },
+  "weights": {
+    "p_displacement": 0.45,
+    "p_market_heat": 0.3,
+    "p_stock_vuln": 0.25
+  },
+  "top_risk_tracts": [
+    {
+      "tract": "387",
+      "borough": "Bronx",
+      "nta": "Belmont",
+      "risk_score": 100.0,
+      "archetype": "Protect",
+      "evictions": 166,
+      "units_res": 1396
+    },
+    {
+      "tract": "311",
+      "borough": "Brooklyn",
+      "nta": "Crown Heights (North)",
+      "risk_score": 100.0,
+      "archetype": "Protect",
+      "evictions": 107,
+      "units_res": 1323
+    },
+    {
+      "tract": "277",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (East)",
+      "risk_score": 99.9,
+      "archetype": "Preserve",
+      "evictions": 119,
+      "units_res": 1733
+    },
+    {
+      "tract": "127",
+      "borough": "Manhattan",
+      "nta": "Hell's Kitchen",
+      "risk_score": 99.9,
+      "archetype": "Preserve",
+      "evictions": 184,
+      "units_res": 4596
+    },
+    {
+      "tract": "377",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (East)",
+      "risk_score": 99.8,
+      "archetype": "Preserve",
+      "evictions": 77,
+      "units_res": 1673
+    },
+    {
+      "tract": "341",
+      "borough": "Brooklyn",
+      "nta": "Crown Heights (North)",
+      "risk_score": 99.8,
+      "archetype": "Protect",
+      "evictions": 48,
+      "units_res": 1047
+    },
+    {
+      "tract": "188",
+      "borough": "Manhattan",
+      "nta": "East Harlem (North)",
+      "risk_score": 99.7,
+      "archetype": "Preserve",
+      "evictions": 158,
+      "units_res": 2661
+    },
+    {
+      "tract": "385",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (East)",
+      "risk_score": 99.7,
+      "archetype": "Preserve",
+      "evictions": 82,
+      "units_res": 1624
+    },
+    {
+      "tract": "247",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (West)",
+      "risk_score": 99.6,
+      "archetype": "Protect",
+      "evictions": 55,
+      "units_res": 1231
+    },
+    {
+      "tract": "373",
+      "borough": "Brooklyn",
+      "nta": "Ocean Hill",
+      "risk_score": 99.6,
+      "archetype": "Preserve",
+      "evictions": 94,
+      "units_res": 1942
+    },
+    {
+      "tract": "265",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (West)",
+      "risk_score": 99.6,
+      "archetype": "Preserve",
+      "evictions": 83,
+      "units_res": 1693
+    },
+    {
+      "tract": "216",
+      "borough": "Manhattan",
+      "nta": "Harlem (South)",
+      "risk_score": 99.5,
+      "archetype": "Preserve",
+      "evictions": 158,
+      "units_res": 3946
+    },
+    {
+      "tract": "206",
+      "borough": "Manhattan",
+      "nta": "East Harlem (North)",
+      "risk_score": 99.5,
+      "archetype": "Preserve",
+      "evictions": 128,
+      "units_res": 2296
+    },
+    {
+      "tract": "230",
+      "borough": "Manhattan",
+      "nta": "Harlem (North)",
+      "risk_score": 99.4,
+      "archetype": "Preserve",
+      "evictions": 297,
+      "units_res": 4051
+    },
+    {
+      "tract": "228",
+      "borough": "Manhattan",
+      "nta": "Harlem (North)",
+      "risk_score": 99.4,
+      "archetype": "Preserve",
+      "evictions": 168,
+      "units_res": 3140
+    }
+  ]
+}
