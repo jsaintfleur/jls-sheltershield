@@ -14,13 +14,15 @@
     "test:e2e": "playwright test",
     "format": "prettier --check .",
     "format:write": "prettier --write .",
-    "data:validate": "node scripts/validate-data.mjs"
+    "data:validate": "python3 scripts/validate/validate_outputs.py",
+    "data": "python3 scripts/build_index.py"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.468.0",
+    "maplibre-gl": "^4.7.1",
     "next": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
