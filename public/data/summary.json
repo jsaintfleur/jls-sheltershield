@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-17T23:33:55Z",
+  "generated_utc": "2026-07-18T13:11:10Z",
   "geography": "New York City census tracts (2020)",
   "tracts_scored": 2224,
   "total_residential_units": 3709601,
@@ -22,6 +22,28 @@
     "p_market_heat": 0.3,
     "p_stock_vuln": 0.25
   },
+  "acs_affordability": {
+    "status": "proposed_no_key",
+    "rows": 0,
+    "year": "2023 ACS 5-year"
+  },
+  "sensitivity": {
+    "iterations": 400,
+    "top_100_retention_median": 0.89,
+    "top_100_retention_p10": 0.8,
+    "median_rank_shift": 71.2,
+    "reading": "Higher top-100 retention means the target list is less sensitive to reasonable weight changes."
+  },
+  "backtest": {
+    "period_train": "2017-2021 executed residential evictions",
+    "period_test": "2022-present executed residential evictions",
+    "tracts_tested": 2224,
+    "spearman_corr": 0.42,
+    "top_quartile_later_evictions_per_1k": 17.99,
+    "bottom_quartile_later_evictions_per_1k": 7.51,
+    "lift_vs_bottom_quartile": 2.39,
+    "reading": "A positive correlation and top-quartile lift indicate the earlier index identified tracts with higher later eviction pressure."
+  },
   "top_risk_tracts": [
     {
       "tract": "387",
@@ -29,8 +51,11 @@
       "nta": "Belmont",
       "risk_score": 100.0,
       "archetype": "Protect",
+      "priority_score": 86.8,
       "evictions": 166,
-      "units_res": 1396
+      "units_res": 1396,
+      "at_risk_units": 1185,
+      "estimated_protected_units_per_1m": 62
     },
     {
       "tract": "311",
@@ -38,8 +63,11 @@
       "nta": "Crown Heights (North)",
       "risk_score": 100.0,
       "archetype": "Protect",
+      "priority_score": 85.5,
       "evictions": 107,
-      "units_res": 1323
+      "units_res": 1323,
+      "at_risk_units": 1123,
+      "estimated_protected_units_per_1m": 58
     },
     {
       "tract": "277",
@@ -47,8 +75,11 @@
       "nta": "Bedford-Stuyvesant (East)",
       "risk_score": 99.9,
       "archetype": "Preserve",
+      "priority_score": 92.1,
       "evictions": 119,
-      "units_res": 1733
+      "units_res": 1733,
+      "at_risk_units": 1613,
+      "estimated_protected_units_per_1m": 89
     },
     {
       "tract": "127",
@@ -56,17 +87,11 @@
       "nta": "Hell's Kitchen",
       "risk_score": 99.9,
       "archetype": "Preserve",
+      "priority_score": 99.4,
       "evictions": 184,
-      "units_res": 4596
-    },
-    {
-      "tract": "341",
-      "borough": "Brooklyn",
-      "nta": "Crown Heights (North)",
-      "risk_score": 99.8,
-      "archetype": "Protect",
-      "evictions": 48,
-      "units_res": 1047
+      "units_res": 4596,
+      "at_risk_units": 4100,
+      "estimated_protected_units_per_1m": 245
     },
     {
       "tract": "377",
@@ -74,8 +99,23 @@
       "nta": "Bedford-Stuyvesant (East)",
       "risk_score": 99.8,
       "archetype": "Preserve",
+      "priority_score": 92.0,
       "evictions": 77,
-      "units_res": 1673
+      "units_res": 1673,
+      "at_risk_units": 1610,
+      "estimated_protected_units_per_1m": 89
+    },
+    {
+      "tract": "341",
+      "borough": "Brooklyn",
+      "nta": "Crown Heights (North)",
+      "risk_score": 99.8,
+      "archetype": "Protect",
+      "priority_score": 82.9,
+      "evictions": 48,
+      "units_res": 1047,
+      "at_risk_units": 996,
+      "estimated_protected_units_per_1m": 50
     },
     {
       "tract": "188",
@@ -83,8 +123,11 @@
       "nta": "East Harlem (North)",
       "risk_score": 99.7,
       "archetype": "Preserve",
+      "priority_score": 96.4,
       "evictions": 158,
-      "units_res": 2661
+      "units_res": 2661,
+      "at_risk_units": 2413,
+      "estimated_protected_units_per_1m": 140
     },
     {
       "tract": "385",
@@ -92,17 +135,11 @@
       "nta": "Bedford-Stuyvesant (East)",
       "risk_score": 99.7,
       "archetype": "Preserve",
+      "priority_score": 91.0,
       "evictions": 82,
-      "units_res": 1624
-    },
-    {
-      "tract": "265",
-      "borough": "Brooklyn",
-      "nta": "Bedford-Stuyvesant (West)",
-      "risk_score": 99.6,
-      "archetype": "Preserve",
-      "evictions": 83,
-      "units_res": 1693
+      "units_res": 1624,
+      "at_risk_units": 1469,
+      "estimated_protected_units_per_1m": 80
     },
     {
       "tract": "247",
@@ -110,8 +147,11 @@
       "nta": "Bedford-Stuyvesant (West)",
       "risk_score": 99.6,
       "archetype": "Protect",
+      "priority_score": 84.7,
       "evictions": 55,
-      "units_res": 1231
+      "units_res": 1231,
+      "at_risk_units": 1086,
+      "estimated_protected_units_per_1m": 55
     },
     {
       "tract": "373",
@@ -119,17 +159,23 @@
       "nta": "Ocean Hill",
       "risk_score": 99.6,
       "archetype": "Preserve",
+      "priority_score": 93.8,
       "evictions": 94,
-      "units_res": 1942
+      "units_res": 1942,
+      "at_risk_units": 1850,
+      "estimated_protected_units_per_1m": 104
     },
     {
-      "tract": "206",
-      "borough": "Manhattan",
-      "nta": "East Harlem (North)",
-      "risk_score": 99.5,
+      "tract": "265",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (West)",
+      "risk_score": 99.6,
       "archetype": "Preserve",
-      "evictions": 128,
-      "units_res": 2296
+      "priority_score": 90.4,
+      "evictions": 83,
+      "units_res": 1693,
+      "at_risk_units": 1419,
+      "estimated_protected_units_per_1m": 77
     },
     {
       "tract": "216",
@@ -137,17 +183,23 @@
       "nta": "Harlem (South)",
       "risk_score": 99.5,
       "archetype": "Preserve",
+      "priority_score": 98.9,
       "evictions": 158,
-      "units_res": 3946
+      "units_res": 3946,
+      "at_risk_units": 3737,
+      "estimated_protected_units_per_1m": 222
     },
     {
-      "tract": "228",
+      "tract": "206",
       "borough": "Manhattan",
-      "nta": "Harlem (North)",
-      "risk_score": 99.4,
+      "nta": "East Harlem (North)",
+      "risk_score": 99.5,
       "archetype": "Preserve",
-      "evictions": 168,
-      "units_res": 3140
+      "priority_score": 94.5,
+      "evictions": 128,
+      "units_res": 2296,
+      "at_risk_units": 1962,
+      "estimated_protected_units_per_1m": 111
     },
     {
       "tract": "230",
@@ -155,8 +207,443 @@
       "nta": "Harlem (North)",
       "risk_score": 99.4,
       "archetype": "Preserve",
+      "priority_score": 99.0,
       "evictions": 297,
-      "units_res": 4051
+      "units_res": 4051,
+      "at_risk_units": 3765,
+      "estimated_protected_units_per_1m": 224
+    },
+    {
+      "tract": "228",
+      "borough": "Manhattan",
+      "nta": "Harlem (North)",
+      "risk_score": 99.4,
+      "archetype": "Preserve",
+      "priority_score": 97.8,
+      "evictions": 168,
+      "units_res": 3140,
+      "at_risk_units": 2934,
+      "estimated_protected_units_per_1m": 172
+    },
+    {
+      "tract": "369",
+      "borough": "Brooklyn",
+      "nta": "Ocean Hill",
+      "risk_score": 99.3,
+      "archetype": "Preserve",
+      "priority_score": 94.2,
+      "evictions": 178,
+      "units_res": 2272,
+      "at_risk_units": 1920,
+      "estimated_protected_units_per_1m": 109
+    },
+    {
+      "tract": "437",
+      "borough": "Brooklyn",
+      "nta": "Bushwick (East)",
+      "risk_score": 99.3,
+      "archetype": "Preserve",
+      "priority_score": 92.9,
+      "evictions": 74,
+      "units_res": 1856,
+      "at_risk_units": 1706,
+      "estimated_protected_units_per_1m": 95
+    },
+    {
+      "tract": "221.02",
+      "borough": "Manhattan",
+      "nta": "Harlem (North)",
+      "risk_score": 99.2,
+      "archetype": "Protect",
+      "priority_score": 87.2,
+      "evictions": 50,
+      "units_res": 1313,
+      "at_risk_units": 1227,
+      "estimated_protected_units_per_1m": 64
+    },
+    {
+      "tract": "275",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (East)",
+      "risk_score": 99.2,
+      "archetype": "Preserve",
+      "priority_score": 91.8,
+      "evictions": 59,
+      "units_res": 1640,
+      "at_risk_units": 1598,
+      "estimated_protected_units_per_1m": 88
+    },
+    {
+      "tract": "800",
+      "borough": "Brooklyn",
+      "nta": "Prospect Lefferts Gardens-Wingate",
+      "risk_score": 99.1,
+      "archetype": "Preserve",
+      "priority_score": 89.2,
+      "evictions": 50,
+      "units_res": 1440,
+      "at_risk_units": 1361,
+      "estimated_protected_units_per_1m": 73
+    },
+    {
+      "tract": "383",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (East)",
+      "risk_score": 99.1,
+      "archetype": "Preserve",
+      "priority_score": 93.6,
+      "evictions": 70,
+      "units_res": 1892,
+      "at_risk_units": 1819,
+      "estimated_protected_units_per_1m": 102
+    },
+    {
+      "tract": "186",
+      "borough": "Manhattan",
+      "nta": "Harlem (South)",
+      "risk_score": 99.1,
+      "archetype": "Protect",
+      "priority_score": 79.9,
+      "evictions": 83,
+      "units_res": 1222,
+      "at_risk_units": 874,
+      "estimated_protected_units_per_1m": 42
+    },
+    {
+      "tract": "201.02",
+      "borough": "Manhattan",
+      "nta": "Harlem (South)",
+      "risk_score": 99.0,
+      "archetype": "Preserve",
+      "priority_score": 92.9,
+      "evictions": 60,
+      "units_res": 1819,
+      "at_risk_units": 1714,
+      "estimated_protected_units_per_1m": 96
+    },
+    {
+      "tract": "345",
+      "borough": "Brooklyn",
+      "nta": "Crown Heights (North)",
+      "risk_score": 99.0,
+      "archetype": "Protect",
+      "priority_score": 83.5,
+      "evictions": 67,
+      "units_res": 1096,
+      "at_risk_units": 1030,
+      "estimated_protected_units_per_1m": 52
+    },
+    {
+      "tract": "273",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (East)",
+      "risk_score": 98.9,
+      "archetype": "Preserve",
+      "priority_score": 89.7,
+      "evictions": 51,
+      "units_res": 1406,
+      "at_risk_units": 1401,
+      "estimated_protected_units_per_1m": 75
+    },
+    {
+      "tract": "259",
+      "borough": "Manhattan",
+      "nta": "Harlem (North)",
+      "risk_score": 98.9,
+      "archetype": "Preserve",
+      "priority_score": 89.1,
+      "evictions": 97,
+      "units_res": 1915,
+      "at_risk_units": 1362,
+      "estimated_protected_units_per_1m": 73
+    },
+    {
+      "tract": "249",
+      "borough": "Manhattan",
+      "nta": "Washington Heights (South)",
+      "risk_score": 98.8,
+      "archetype": "Protect",
+      "priority_score": 62.8,
+      "evictions": 27,
+      "units_res": 486,
+      "at_risk_units": 425,
+      "estimated_protected_units_per_1m": 16
+    },
+    {
+      "tract": "200",
+      "borough": "Manhattan",
+      "nta": "Harlem (South)",
+      "risk_score": 98.8,
+      "archetype": "Preserve",
+      "priority_score": 94.2,
+      "evictions": 62,
+      "units_res": 1949,
+      "at_risk_units": 1922,
+      "estimated_protected_units_per_1m": 109
+    },
+    {
+      "tract": "327",
+      "borough": "Brooklyn",
+      "nta": "Prospect Lefferts Gardens-Wingate",
+      "risk_score": 98.7,
+      "archetype": "Preserve",
+      "priority_score": 87.9,
+      "evictions": 55,
+      "units_res": 1422,
+      "at_risk_units": 1270,
+      "estimated_protected_units_per_1m": 67
+    },
+    {
+      "tract": "245",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (West)",
+      "risk_score": 98.7,
+      "archetype": "Preserve",
+      "priority_score": 94.4,
+      "evictions": 73,
+      "units_res": 2101,
+      "at_risk_units": 1968,
+      "estimated_protected_units_per_1m": 111
+    },
+    {
+      "tract": "249",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (West)",
+      "risk_score": 98.7,
+      "archetype": "Preserve",
+      "priority_score": 93.5,
+      "evictions": 58,
+      "units_res": 1814,
+      "at_risk_units": 1804,
+      "estimated_protected_units_per_1m": 101
+    },
+    {
+      "tract": "367",
+      "borough": "Brooklyn",
+      "nta": "Ocean Hill",
+      "risk_score": 98.6,
+      "archetype": "Protect",
+      "priority_score": 71.4,
+      "evictions": 53,
+      "units_res": 689,
+      "at_risk_units": 598,
+      "estimated_protected_units_per_1m": 26
+    },
+    {
+      "tract": "118",
+      "borough": "Brooklyn",
+      "nta": "Sunset Park (Central)",
+      "risk_score": 98.6,
+      "archetype": "Protect",
+      "priority_score": 69.8,
+      "evictions": 26,
+      "units_res": 676,
+      "at_risk_units": 565,
+      "estimated_protected_units_per_1m": 24
+    },
+    {
+      "tract": "119",
+      "borough": "Manhattan",
+      "nta": "Midtown-Times Square",
+      "risk_score": 98.5,
+      "archetype": "Protect",
+      "priority_score": 77.5,
+      "evictions": 31,
+      "units_res": 866,
+      "at_risk_units": 782,
+      "estimated_protected_units_per_1m": 36
+    },
+    {
+      "tract": "221",
+      "borough": "Brooklyn",
+      "nta": "Crown Heights (North)",
+      "risk_score": 98.5,
+      "archetype": "Preserve",
+      "priority_score": 92.6,
+      "evictions": 70,
+      "units_res": 1950,
+      "at_risk_units": 1682,
+      "estimated_protected_units_per_1m": 93
+    },
+    {
+      "tract": "317.01",
+      "borough": "Brooklyn",
+      "nta": "Crown Heights (North)",
+      "risk_score": 98.4,
+      "archetype": "Preserve",
+      "priority_score": 91.9,
+      "evictions": 60,
+      "units_res": 1775,
+      "at_risk_units": 1614,
+      "estimated_protected_units_per_1m": 89
+    },
+    {
+      "tract": "317.02",
+      "borough": "Brooklyn",
+      "nta": "Crown Heights (North)",
+      "risk_score": 98.4,
+      "archetype": "Preserve",
+      "priority_score": 91.5,
+      "evictions": 53,
+      "units_res": 1610,
+      "at_risk_units": 1550,
+      "estimated_protected_units_per_1m": 85
+    },
+    {
+      "tract": "255",
+      "borough": "Manhattan",
+      "nta": "Washington Heights (South)",
+      "risk_score": 98.3,
+      "archetype": "Preserve",
+      "priority_score": 93.0,
+      "evictions": 77,
+      "units_res": 2251,
+      "at_risk_units": 1759,
+      "estimated_protected_units_per_1m": 98
+    },
+    {
+      "tract": "335",
+      "borough": "Brooklyn",
+      "nta": "Crown Heights (South)",
+      "risk_score": 98.3,
+      "archetype": "Protect",
+      "priority_score": 79.2,
+      "evictions": 30,
+      "units_res": 905,
+      "at_risk_units": 848,
+      "estimated_protected_units_per_1m": 40
+    },
+    {
+      "tract": "59",
+      "borough": "Brooklyn",
+      "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+      "risk_score": 98.2,
+      "archetype": "Protect",
+      "priority_score": 70.6,
+      "evictions": 25,
+      "units_res": 736,
+      "at_risk_units": 590,
+      "estimated_protected_units_per_1m": 25
+    },
+    {
+      "tract": "227",
+      "borough": "Manhattan",
+      "nta": "Hamilton Heights-Sugar Hill",
+      "risk_score": 98.2,
+      "archetype": "Preserve",
+      "priority_score": 97.1,
+      "evictions": 112,
+      "units_res": 2782,
+      "at_risk_units": 2718,
+      "estimated_protected_units_per_1m": 158
+    },
+    {
+      "tract": "197.02",
+      "borough": "Manhattan",
+      "nta": "Harlem (South)",
+      "risk_score": 98.2,
+      "archetype": "Protect",
+      "priority_score": 82.0,
+      "evictions": 34,
+      "units_res": 1096,
+      "at_risk_units": 959,
+      "estimated_protected_units_per_1m": 47
+    },
+    {
+      "tract": "217",
+      "borough": "Brooklyn",
+      "nta": "Crown Heights (North)",
+      "risk_score": 98.1,
+      "archetype": "Preserve",
+      "priority_score": 92.7,
+      "evictions": 63,
+      "units_res": 1968,
+      "at_risk_units": 1708,
+      "estimated_protected_units_per_1m": 95
+    },
+    {
+      "tract": "226",
+      "borough": "Manhattan",
+      "nta": "Harlem (North)",
+      "risk_score": 98.1,
+      "archetype": "Preserve",
+      "priority_score": 97.0,
+      "evictions": 130,
+      "units_res": 2879,
+      "at_risk_units": 2709,
+      "estimated_protected_units_per_1m": 158
+    },
+    {
+      "tract": "387",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (East)",
+      "risk_score": 98.0,
+      "archetype": "Preserve",
+      "priority_score": 92.4,
+      "evictions": 78,
+      "units_res": 2088,
+      "at_risk_units": 1678,
+      "estimated_protected_units_per_1m": 93
+    },
+    {
+      "tract": "208",
+      "borough": "Manhattan",
+      "nta": "Harlem (North)",
+      "risk_score": 98.0,
+      "archetype": "Preserve",
+      "priority_score": 96.1,
+      "evictions": 143,
+      "units_res": 2696,
+      "at_risk_units": 2381,
+      "estimated_protected_units_per_1m": 137
+    },
+    {
+      "tract": "321",
+      "borough": "Brooklyn",
+      "nta": "Crown Heights (South)",
+      "risk_score": 97.9,
+      "archetype": "Preserve",
+      "priority_score": 94.9,
+      "evictions": 116,
+      "units_res": 2378,
+      "at_risk_units": 2079,
+      "estimated_protected_units_per_1m": 118
+    },
+    {
+      "tract": "269",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (West)",
+      "risk_score": 97.9,
+      "archetype": "Protect",
+      "priority_score": 88.2,
+      "evictions": 40,
+      "units_res": 1333,
+      "at_risk_units": 1297,
+      "estimated_protected_units_per_1m": 69
+    },
+    {
+      "tract": "293",
+      "borough": "Brooklyn",
+      "nta": "Bedford-Stuyvesant (East)",
+      "risk_score": 97.8,
+      "archetype": "Preserve",
+      "priority_score": 88.7,
+      "evictions": 54,
+      "units_res": 1495,
+      "at_risk_units": 1334,
+      "estimated_protected_units_per_1m": 71
+    },
+    {
+      "tract": "403",
+      "borough": "Brooklyn",
+      "nta": "Bushwick (East)",
+      "risk_score": 97.8,
+      "archetype": "Preserve",
+      "priority_score": 86.2,
+      "evictions": 70,
+      "units_res": 1475,
+      "at_risk_units": 1177,
+      "estimated_protected_units_per_1m": 61
     }
   ]
 }
