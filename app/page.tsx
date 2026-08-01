@@ -26,7 +26,7 @@ export default function OverviewPage() {
       </div>
       {/* Hero */}
       <section className="pt-14 pb-10">
-        <p className="text-sm font-semibold uppercase tracking-wider text-brand-700">
+        <p className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-text)]">
           Community Development · Capital Prioritization
         </p>
         <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
@@ -86,7 +86,7 @@ export default function OverviewPage() {
                 <span className="w-28 shrink-0 text-sm text-ink-soft">{name}</span>
                 <div className="h-6 flex-1 overflow-hidden rounded bg-slate-100">
                   <div
-                    className="flex h-full items-center justify-end rounded bg-brand-600 pr-2 text-xs font-medium text-white"
+                    className="flex h-full items-center justify-end rounded bg-[var(--data-primary)] pr-2 text-xs font-medium text-white"
                     style={{ width: `${(v / maxBoro) * 100}%` }}
                   >
                     {v}

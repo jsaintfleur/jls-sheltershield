@@ -1,3 +1,5 @@
+@import "../lib/design/theme.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,14 +27,36 @@
   --text-primary: var(--slate-900);
   --text-secondary: var(--slate-600);
   --text-tertiary: var(--slate-500);
+  --text-disabled: var(--slate-400);
   --text-inverse: #ffffff;
 
-  --accent-50: #ccfbf1;
-  --accent-100: #99f6e4;
-  --accent-500: #0d9488;
-  --accent-600: #0f766e;
-  --accent-700: #115e59;
+  --accent-50: #ecfdf3;
+  --accent-100: #d0f8de;
+  --accent-200: #a8efbf;
+  --accent-300: #6fe39b;
+  --accent-400: #39ca6c;
+  --accent-500: #16a34a;
+  --accent-600: #0b7a3b;
+  --accent-700: #095e2e;
+  --accent-800: #074a25;
+  --accent-900: #05331a;
+  --accent-text: #095e2e;
+  --accent-badge-bg: #ecfdf3;
+  --accent-border: #d0f8de;
   --accent-contrast: #ffffff;
+  --chrome-bg: #0a0a0a;
+  --chrome-text: #ffffff;
+  --chrome-muted: #d1d5db;
+  --chrome-hover: rgba(255, 255, 255, 0.1);
+  --chrome-border: rgba(255, 255, 255, 0.18);
+  --data-primary: #0d9488;
+  --data-secondary: #0284c7;
+  --data-band: rgba(13, 148, 136, 0.24);
+  --data-sequential-1: #ecfdf5;
+  --data-sequential-2: #a7f3d0;
+  --data-sequential-3: #fbbf24;
+  --data-sequential-4: #f97316;
+  --data-sequential-5: #c81e29;
 
   --success: #15803d;
   --success-bg: #dcfce7;
@@ -40,7 +64,10 @@
   --warning: #b45309;
   --warning-bg: #fef3c7;
   --warning-fg: #451a03;
-  --danger: #b91c1c;
+  --danger: #c81e29;
+  --danger-500: #e0323d;
+  --danger-600: #c81e29;
+  --danger-700: #a3141d;
   --danger-bg: #fee2e2;
   --danger-fg: #450a0a;
   --info: #1d4ed8;
@@ -83,7 +110,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid #0d9488;
+  outline: 2px solid var(--accent-600);
   outline-offset: 2px;
   border-radius: 4px;
   box-shadow: var(--ring-focus);
@@ -93,7 +120,7 @@ a {
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(15, 23, 42, 0.16);
   padding: 12px 14px;
-  font-family: var(--font-inter);
+  font-family: var(--font-sans);
 }
 
 @media (prefers-reduced-motion: reduce) {
